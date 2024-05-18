@@ -26,7 +26,11 @@ body {
   margin: 0 auto;
 }
 
-/*********************************/
+.page {}
+
+.page__hero {}
+
+/*********************************COMPONENTS*/
 
 .header-block {
   font-weight: 800;
@@ -53,6 +57,8 @@ body {
 /*****************************************/
 
 .header {
+  /* position: sticky;
+  top: 0; */
   padding-top: 77px;
 }
 
@@ -91,3 +97,110 @@ body {
 .menu__link:hover {
   color: rgb(71, 55, 255);
 }
+
+/***************************************HERO*/
+
+
+.hero {
+  padding-top: 62px;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.hero__container {
+  display: flex;
+}
+
+.hero__container::before,
+.hero__container::after {
+  content: "";
+  position: absolute;
+}
+
+.hero__container::before {
+  left: calc(50% + 30px);
+  bottom: 0;
+  width: 100vw;
+  height: 150%;
+  border-radius: 50px;
+  transform: skewX(-20deg);
+  transform-origin: left bottom;
+  background: rgb(68, 117, 242);
+  box-shadow: 0px 30px 60px 0px rgba(71, 74, 87, 0.25);
+}
+
+.hero__container::after {}
+
+.hero__content {
+  flex: 0 1 50%;
+}
+
+.content-hero {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: 30px;
+}
+
+.content__title {
+  font-size: 76px;
+  font-weight: 800;
+  color: rgb(0, 0, 0);
+  letter-spacing: -4px;
+  line-height: calc(89 / 76 *100%);
+}
+
+.content__title a {
+  color: rgb(68, 117, 242);
+  text-decoration: underline;
+}
+
+.content__title:hover {
+  text-decoration: none;
+}
+
+.content-hero__text {}
+
+.content-hero__text p {
+  line-height: calc(30 / 16 *100%);
+}
+
+.content-hero__text p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.content-hero__button {
+  border-radius: 10px;
+  box-shadow: 0px 30px 60px 0px rgba(68, 117, 242, 0.25);
+  background-color: rgb(68, 117, 242);
+  padding: 18px 54px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  line-height: calc(25 / 16 *100%);
+  position: relative;
+  top: 0;
+  transition: all .3s;
+}
+
+.content-hero__button:hover {
+  top: 3px;
+  box-shadow: 0px 30px 60px 0px rgba(68, 117, 242, 0.5);
+}
+
+.hero__images {
+  flex: 0 1 50%;
+}
+
+.images-hero {}
+
+.images-hero__item {}
+
+.images-hero__item--01 {}
+
+.images-hero__image {}
+
+.images-hero__item--02 {}
+
+.images-hero__item--03 {}
+
+.images-hero__item--04 {}
